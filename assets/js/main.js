@@ -1,20 +1,8 @@
-  /* Popup form controls */
-/*   function openForm() {
-    document.getElementById("schedulecall").style.display = "block";
-  }
-  
-  function closeForm() {
-    document.getElementById("schedulecall").style.display = "none";
-  }
-
-  var date = new Date();
-  date.setDate(date.getDate());
-
-  $('.preffereddate').datepicker({ 
-       minDate: -5
-   }); */
-
 (function() {
+  "use strict";
+
+  window.togglenavbar = togglenavbar;
+  window.closenavbar = closenavbar;
 
   /* Date and Time Picker functions */
   $( function() {
@@ -38,6 +26,31 @@
       scrollbar: false
     });
   });
+
+  function closenavbar() {
+    var x = document.getElementById("navbar");
+    var y = document.getElementById("navhamburger");
+    if (x.classList.contains('navbar-mobile')) {
+      x.classList.remove('navbar-mobile')
+      y.classList.remove('bi-x')
+      y.classList.add('bi-list')
+    }
+  }
+
+  function togglenavbar() {
+    var x = document.getElementById("navbar");
+    var y = document.getElementById("navhamburger");
+    if (x.classList.contains('navbar-mobile')) {
+      x.classList.remove('navbar-mobile')
+      y.classList.remove('bi-x')
+      y.classList.add('bi-list')
+    }
+    else {
+      x.classList.add('navbar-mobile')
+      y.classList.remove('bi-list')
+      y.classList.add('bi-x')
+    }
+  }
 
   /**
    * Easy selector helper function
