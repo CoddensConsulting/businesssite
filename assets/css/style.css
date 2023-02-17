@@ -127,11 +127,10 @@ hr {
 --------------------------------------------------------------*/
 
 button.close {
-  background: #D5D4FF;
-  border: 1px solid black;
-  border-radius: 15px;
-  height: 28.5px;
-  width: 28.5px;
+  background: none;
+  border: none;
+  color: #F1F1E6;
+  font-size: 24px;
 }
 
 #preferredtime1 {
@@ -695,7 +694,7 @@ button.close {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 80vh;
+  /* height: 80vh; */
   background: #484C7F;
 }
 
@@ -768,9 +767,9 @@ button.close {
 }
 
 @media (max-width:1399px) {
-  #hero {
-    height: 90vh;
-  }
+/*   #hero {
+     height: 90vh; 
+  } */
   
   #hero .container{
     padding-top: 10px;
@@ -783,7 +782,6 @@ button.close {
 
 @media (max-width: 991px) {
   #hero {
-    height: 90vh;
     text-align: center;
   }
 
