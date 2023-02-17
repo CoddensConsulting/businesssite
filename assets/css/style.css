@@ -265,7 +265,7 @@ button.close {
 }
 
 .form-popup-container .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .form-popup-container label {
@@ -308,6 +308,35 @@ button.close {
   background: #D5D4FF;
 }
 
+@media(max-width: 1278px){
+  .modal {
+    --bs-modal-width: 95%;
+  }
+}
+
+@media(max-width: 1000px){
+  .datepicker{
+    margin-bottom: 5px;
+  }
+  .timepicker{
+    margin-right: 15px;
+  }
+}
+
+@media(max-width: 467px){
+  .modal {
+    --bs-modal-margin: 1rem;
+  }
+}
+
+@media(min-width: 576px){
+  .modal {
+    --bs-modal-margin: 1rem;
+  }
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -348,8 +377,7 @@ button.close {
 #header {
   transition: all 0.5s;
   z-index: 997;
-  padding: 7px 0;
-  height: 56px;
+  height: 64px;
   background: rgba(72, 76, 127, 0.9);
 }
 
@@ -376,6 +404,34 @@ button.close {
   max-height: 40px;
 }
 
+#header .container, .container-sm {
+  max-width: 92%;
+  padding-top: 10px;
+}
+
+@media (max-width: 991px) {
+  #header {
+    height: 48px;
+  }
+}
+
+@media (max-width: 655px) {
+  #header .logo a {
+    font-size: 26px;
+  }
+}
+
+
+@media (max-width: 434px) {
+  #header {
+    height: 84px;
+  }
+  
+  #header .logo a {
+    font-size: 26px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -383,6 +439,7 @@ button.close {
 * Desktop Navigation 
 */
 .navbar {
+  /* min-width: 200px; */
   padding: 0;
 }
 
@@ -510,6 +567,16 @@ button.close {
   }
 }
 
+@media (max-width: 991px) {
+  .navbar-mobile ul, .navbar-mobile ul:focus,
+  .navbar-mobile li, .navbar-mobile li:focus,
+  .navbar-mobile a, .navbar-mobile a:focus,
+  .navbar-mobile .getstarted, .navbar-mobile .getstarted:focus{
+    font-size: 20px;
+  }
+}
+
+
 /**
 * Mobile Navigation 
 */
@@ -566,12 +633,13 @@ button.close {
   background-color: #fff;
   overflow-y: auto;
   transition: 0.3s;
+  font-size: 20px;
 }
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
   padding: 10px 20px;
-  font-size: 15px;
+  font-size: 20px;
   color: #484C7F;
 }
 
@@ -690,13 +758,31 @@ button.close {
   color: #FF8C78;
 }
 
+#hero .hero-img{
+  padding-left: 175px;
+}
+
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
+@media (max-width:1399px) {
+  #hero {
+    height: 65vh;
+  }
+  
+  #hero .container{
+    padding-top: 10px;
+  }
+
+  #hero .hero-img{
+    padding-left: 64px;
+  }
+}
+
 @media (max-width: 991px) {
   #hero {
-    height: 100vh;
+    height: 80vh;
     text-align: center;
   }
 
@@ -706,11 +792,12 @@ button.close {
   }
 
   #hero .hero-img {
+    padding-left: 0px;
     text-align: center;
   }
 
   #hero .hero-img img {
-    width: 50%;
+    width: 36%;
   }
 }
 
@@ -727,18 +814,28 @@ button.close {
   }
 
   #hero .hero-img img {
-    width: 70%;
+    width: 60%;
   }
 }
 
 @media (max-width: 575px) {
+  #hero {
+    height: 70vh;
+  }
+  
   #hero .hero-img img {
-    width: 80%;
+    width: 50%;
   }
 
   #hero .btn-get-started {
     font-size: 16px;
     padding: 10px 24px 11px 24px;
+  }
+
+  @media (max-width: 446px) {
+    #hero {
+      height: 65vh;
+    }
   }
 }
 
@@ -766,7 +863,7 @@ button.close {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 88px 0;
   overflow: hidden;
 }
 
