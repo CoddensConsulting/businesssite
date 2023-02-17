@@ -127,33 +127,41 @@
               </div>
             </div>
             <div class="row">
-              <div class="form-group">
-                <label for="date" >Preferred Dates/Times</label>
-                <div class="form-group datetimepicker">
+              <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                <label for="date1" >1<sup>st</sup> Preferred Date/Time</label>
+                <div class="datetimepicker">
                   <input class="datepicker" id="preferreddate1"/>
                   <input class="timepicker" id="preferredtime1"/>
+                </div>
+              </div>
+              <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                <label id="date2label" for="date2">2<sup>nd</sup> Preferred Date/Time</label>
+                <div class="datetimepicker">
                   <input class="datepicker" id="preferreddate2"/>
                   <input class="timepicker" id="preferredtime2"/>
+              
                 </div>
               </div>
             </div>
-            <div class="form-group">
-              <label for="name">Products to Discuss</label><br>
-              <div class="form-check form-check-inline">
-                <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off">
-                <label class="btn btn-primary" for="btn-check-5">D365 for Sales</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off">
-                <label class="btn btn-primary" for="btn-check-6">D365 for Customer Service</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input type="checkbox" class="btn-check" id="btn-check-7" autocomplete="off">
-                <label class="btn btn-primary" for="btn-check-7">D365 for Marketing</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input type="checkbox" class="btn-check" id="btn-check-8" autocomplete="off">
-                <label class="btn btn-primary" for="btn-check-8">D365 for Field Service</label>
+            <div class="row">
+              <div class="form-group">
+                <label for="name">Products to Discuss</label><br>
+                <div class="form-check form-check-inline col-lg-4 col-md-4">
+                  <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off">
+                  <label class="btn btn-primary" for="btn-check-5">D365 for Sales</label>
+                </div>
+                <div class="form-check form-check-inline col-lg-4 col-md-6">
+                  <input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off">
+                  <label class="btn btn-primary" for="btn-check-6">D365 for Customer Service</label>
+                </div>
+                <div class="form-check form-check-inline col-lg-4 col-md-4">
+                  <input type="checkbox" class="btn-check" id="btn-check-7" autocomplete="off">
+                  <label class="btn btn-primary" for="btn-check-7">D365 for Marketing</label>
+                </div>
+                <div class="form-check form-check-inline col-lg-4 col-md-6">
+                  <input type="checkbox" class="btn-check" id="btn-check-8" autocomplete="off">
+                  <label class="btn btn-primary" for="btn-check-8">D365 for Field Service</label>
+                </div>
               </div>
             </div>
             <div class="form-group">
@@ -188,9 +196,9 @@
         <!-- NEED TO MODIFY ~ update navbar link tree -->
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="#hero" onclick="closenavbar()">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about" onclick="closenavbar()">About</a></li>
+          <li><a class="nav-link scrollto" href="#services" onclick="closenavbar()">Services</a></li>
           <!-- <li><a class="nav-link scrollto" href="#portfolio">Testimonials</a></li> -->
           <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
 <!--           <li class="dropdown"><a href="#"><span>Dynamics 365 Consulting</span> <i class="bi bi-chevron-down"></i></a>
@@ -210,11 +218,10 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li> -->
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><button type="button" class="getstarted scrollto" data-bs-toggle="modal" data-bs-target="#scheduleCallModal">Schedule a Call</button></li>
-          
+          <li><a class="nav-link scrollto" href="#contact" onclick="closenavbar()">Contact</a></li>
+          <li><button type="button" class="getstarted" onclick="closenavbar()" data-bs-toggle="modal" data-bs-target="#scheduleCallModal" >Let's Talk</button></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <i id="navhamburger" class="bi bi-list mobile-nav-toggle" onclick="togglenavbar()"></i>
       </nav><!-- .navbar -->
 
     </div>
@@ -234,7 +241,7 @@
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+          <img src="assets/img/business_technology_indigo.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -369,7 +376,7 @@
 
           </div>
 
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/why-us.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/business_teamwork_indigo1.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
         </div>
 
       </div>
@@ -481,11 +488,11 @@
       <div class="container" data-aos="zoom-in">
 
         <div class="row">
-          <div class="col-lg-9 text-center text-lg-start">
+          <div class="col-lg-9 col-md-7 text-center text-lg-start">
             <h3>Let's Talk</h3>
             <p> Tell us about your project and we will see if we're a good fit. We're happy to provide proof of concepts or answer any questions/concerns you may have before finalizing a SOW.</p>
           </div>
-          <div class="col-lg-3 cta-btn-container text-center">
+          <div class="col-lg-3 col-md-5 cta-btn-container text-center">
             <button type="button" class="cta-btn align-middle" data-bs-toggle="modal" data-bs-target="#scheduleCallModal">Schedule a Call</button>
           </div>
         </div>
@@ -871,23 +878,25 @@
                   <input type="tel" class="form-control" name="phone" id="phone" required>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="name">Interested Products</label><br>
-                <div class="form-check form-check-inline">
-                  <input type="checkbox" class="btn-check" id="btn-check-1" autocomplete="off">
-                  <label class="btn btn-primary" for="btn-check-1">D365 for Sales</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input type="checkbox" class="btn-check" id="btn-check-2" autocomplete="off">
-                  <label class="btn btn-primary" for="btn-check-2">D365 for Customer Service</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off">
-                  <label class="btn btn-primary" for="btn-check-3">D365 for Marketing</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off">
-                  <label class="btn btn-primary" for="btn-check-4">D365 for Field Service</label>
+              <div class="row">
+                <div class="form-group">
+                  <label for="name">Interested Products</label><br>
+                  <div class="form-check form-check-inline col-lg-4 col-md-6">
+                    <input type="checkbox" class="btn-check" id="btn-check-1" autocomplete="off">
+                    <label class="btn btn-primary" for="btn-check-1">D365 for Sales</label>
+                  </div>
+                  <div class="form-check form-check-inline col-lg-4 col-md-6">
+                    <input type="checkbox" class="btn-check" id="btn-check-2" autocomplete="off">
+                    <label class="btn btn-primary" for="btn-check-2">D365 for Customer Service</label>
+                  </div>
+                  <div class="form-check form-check-inline col-lg-4 col-md-6">
+                    <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off">
+                    <label class="btn btn-primary" for="btn-check-3">D365 for Marketing</label>
+                  </div>
+                  <div class="form-check form-check-inline col-lg-4 col-md-6">
+                    <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off">
+                    <label class="btn btn-primary" for="btn-check-4">D365 for Field Service</label>
+                  </div>
                 </div>
               </div>
               <div class="form-group">
