@@ -130,6 +130,7 @@ button.close {
   background: #D5D4FF;
   border: 1px solid black;
   border-radius: 15px;
+  height: 28.5px;
   width: 28.5px;
 }
 
@@ -426,7 +427,7 @@ button.close {
   #header {
     height: 84px;
   }
-  
+
   #header .logo a {
     font-size: 26px;
   }
@@ -768,7 +769,7 @@ button.close {
 
 @media (max-width:1399px) {
   #hero {
-    height: 65vh;
+    height: 90vh;
   }
   
   #hero .container{
@@ -782,7 +783,7 @@ button.close {
 
 @media (max-width: 991px) {
   #hero {
-    height: 80vh;
+    height: 90vh;
     text-align: center;
   }
 
@@ -819,9 +820,9 @@ button.close {
 }
 
 @media (max-width: 575px) {
-  #hero {
+/*   #hero {
     height: 70vh;
-  }
+  } */
   
   #hero .hero-img img {
     width: 50%;
@@ -832,11 +833,11 @@ button.close {
     padding: 10px 24px 11px 24px;
   }
 
-  @media (max-width: 446px) {
+/*   @media (max-width: 446px) {
     #hero {
       height: 65vh;
     }
-  }
+  } */
 }
 
 @-webkit-keyframes up-down {
